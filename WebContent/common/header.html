@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Fablix</title>
+
+</head>
+<body>
+<nav class="navbar navbar-default navbar-inverse">
+	<div class="container-fluid">
+		<!-- Brand and toggle get grouped for better mobile display -->
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle collapsed"
+				data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
+				aria-expanded="false">
+				<span class="sr-only">Toggle navigation</span> 
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span> 
+				<span class="icon-bar"></span>
+			</button>
+			<a class="navbar-brand" href="movielist.html">Fabflix</a>
+		</div>
+
+		<!-- Collect the nav links, forms, and other content for toggling -->
+		<div class="collapse navbar-collapse"
+			id="bs-example-navbar-collapse-1">
+			<ul class="nav navbar-nav">
+				
+<!-- 				Genres Dropdown -->
+				<li class="nav-item dropdown"><a class="nav-link dropdown-toggle"
+					data-toggle="dropdown" role="button" aria-haspopup="true" aria-haspopup="true"
+					aria-expanded="false">Genres</a>
+					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" onclick="findGenre(1)">Action</a>
+                        <a class="dropdown-item" onclick="findGenre(2)">Adult</a>
+                        <a class="dropdown-item" onclick="findGenre(3)">Adventure</a>
+                        <a class="dropdown-item" onclick="findGenre(4)">Animation</a>
+                        <a class="dropdown-item" onclick="findGenre(5)">Biography</a>
+                        <a class="dropdown-item" onclick="findGenre(6)">Comedy</a>
+                        <a class="dropdown-item" onclick="findGenre(7)">Crime</a>
+                        <a class="dropdown-item" onclick="findGenre(8)">Documentary</a>
+                        <a class="dropdown-item" onclick="findGenre(9)">Drama</a>
+                        <a class="dropdown-item" onclick="findGenre(10)">Family</a>
+                        <a class="dropdown-item" onclick="findGenre(11)">Fantasy</a>
+                        <a class="dropdown-item" onclick="findGenre(12)">History</a>
+                        <a class="dropdown-item" onclick="findGenre(13)">Horror</a>
+                        <a class="dropdown-item" onclick="findGenre(14)">Music</a>
+                        <a class="dropdown-item" onclick="findGenre(15)">Musical</a>
+                        <a class="dropdown-item" onclick="findGenre(16)">Mystery</a>
+                        <a class="dropdown-item" onclick="findGenre(17)">Reality-TV</a>
+                        <a class="dropdown-item" onclick="findGenre(18)">Romance</a>
+                        <a class="dropdown-item" onclick="findGenre(19)">Sci-Fi</a>
+                        <a class="dropdown-item" onclick="findGenre(20)">Sport</a>
+                        <a class="dropdown-item" onclick="findGenre(21)">Thriller</a>
+                        <a class="dropdown-item" onclick="findGenre(22)">War</a>
+                        <a class="dropdown-item" onclick="findGenre(23)">Western</a>
+                        <a class="dropdown-item" onclick="findGenre(0)">All</a>
+                    </div>
+				</li>
+            </ul>
+            
+            
+<!-- 			Search bar -->
+			<form class="navbar-form navbar-left">
+				<div class="form-group">
+					<input  type="text" class="form-control" id="movie_name"
+						placeholder="Enter Movie Title">
+				</div>
+				<button type="button" onclick="searchMovie()" class="btn btn-default">Search</button>
+			</form>
+			
+
+			
+<!-- 			Sign out button -->
+			<ul class="nav navbar-nav navbar-right ml-auto">
+				<li><a href="movielist.html">Movie List</a></li>
+				<li><a href="cart.html">Cart</a></li>
+				<li><a href="logout">Sign out</a></li>
+			</ul>
+		</div>
+		<!-- /.navbar-collapse -->
+	</div>
+	<!-- /.container-fluid -->
+</nav>
+</body>
+</html>

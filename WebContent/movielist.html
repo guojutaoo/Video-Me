@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+<meta charset="ISO-8859-1">
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>  
+    <script src="http://www.w3schools.com/lib/w3data.js"></script>
+
+
+
+<link rel="stylesheet" type="text/css" href="common.css" media="screen" />
+        <style type="text/css"> 
+            a:hover{color:white;}
+            a:vistied{color:pink;}
+       </style>
+
+<link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+<link rel="stylesheet" type="text/css" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+<title>Movie List</title>
+
+</head>
+<body>
+<meta http-equiv="refresh" content="1000">
+<div w3-include-html="common/header.html"></div> 
+<script>
+w3IncludeHTML();
+</script>
+<center><h1>Movie</h1></center>
+<div class="container-fluid" onload="refresh();">
+    <div class="row">
+        <div class="col-md-3">
+            	<select name="keyword" id="keyword" class="selectpicker">
+                    <option value="all">all</option>
+	  	            <option value="rating">rating</option>
+                    <option value="year">year</option>
+                </select>
+                <button class="btn btn-primary" onclick="orderby()">Submit</button>
+        </div>
+        <div class="col-md-3">
+            <button class="btn btn-success" onclick="asc()" >Asc</button>
+            <button class="btn btn-danger" onclick="desc()">Desc</button>
+        </div>
+        <div class="col-md-4">
+            <form class="form-inline" action="">
+                <input type="text" class="" id="num_page" placeholder="page number" onkeyup="change_page()">
+            </form>
+        </div>
+    </div>
+</div>
+<table class="table">
+    <thead> 
+        <tr class="active">
+            <th scope="col">Name</th>
+            <th scope="col">Director</th>
+            <th scope="col">Year</th>
+            <th scope="col">Rating</th> 
+        </tr>
+       <tbody id="table_body">
+       
+       </tbody>
+</table>
+
+
+<div  id="center">
+    <ul class="pagination">
+	<li id="item1"><a onclick="prev()">&laquo;</a></li>
+	<li id="abc"><a onclick="nav_change(4)">1</a></li>
+	<li><a nav_change()>2</a></li>
+	<li><a nav_change()>3</a></li>
+	<li><a nav_change()>4</a></li>
+	<li><a nav_change()>5</a></li>
+    <li><a onclick="next()">&raquo;</a></li>
+    </ul>
+</div>
+&nbsp; &nbsp; &nbsp;
+
+<div >
+<div w3-include-html="common/footer.html"></div> 
+</div>
+
+<script>
+w3IncludeHTML();
+</script>
+<script type="text/javascript" src="movielist.js"></script>
+<script type="text/javascript" src="changepage.js"></script>
+<script type="text/javascript" src="searchmovie.js"></script>
+</body>
+</html>

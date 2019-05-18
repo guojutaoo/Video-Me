@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <script type="text/javascript" src="singleactor.js"></script>
+<title>Movie Star Info</title>
+    <script>
+       $(function(){
+         $("#header").load("common/header.html"); 
+         $("#footer").load("common/footer.html"); 
+        });
+    </script> 
+    <style>
+    h1{
+        width: 100%; 
+        text-align: center;
+        text-decoration-color: blueviolet;
+        margin-top: 2%;
+        margin-bottom: 3%;
+        } 
+    #actor{
+        text-align: center;
+        margin-right: 430px;
+        margin-left: 430px;
+        }
+    button{
+        margin-top: 2%;
+        
+        }
+    li a:hover {
+        background-color: #8A2BE2;
+        color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="header"></div>
+        <h1>Actor Info</h1>  
+        <div id="actor"></div>
+   <div class="footer"></div>
+</body>
+</html>

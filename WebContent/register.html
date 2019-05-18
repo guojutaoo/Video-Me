@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Fablix Register</title>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<script type="text/javascript" src="user-authentication.js"></script>
+<link rel="stylesheet" type="text/css" href="common.css" media="screen" />
+<link rel="stylesheet" type="text/css" href="login.css" media="screen" />
+
+</head>
+
+<body>
+<h1>Registration Form</h1>
+	<form action="CheckInfo" method="post" name="register_form">
+        <div class="group">
+            <label>Userame:</label>
+                <input type="text" class="form-control" name="username" placeholder="Username">
+            <label>Password:</label>
+                <input type="password" class="form-control" name="psw1" placeholder="Password">
+            <label>Re-type Password:</label>
+                <input type="password" class="form-control" name="psw2" placeholder="Re-type Password">
+                <br/>
+            <button class="btn btn-primary" onclick="CheckInfo">Submit</button>
+            <br/><br/>
+            <button class="btn btn-primary" onclick="jumpToLogin();">Return</button>
+        </div>
+    </form>
+</body>
+</html>
