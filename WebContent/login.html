@@ -24,13 +24,11 @@
                 <label>Password</label>
                 <input name="password" type="password" class="form-control" placeholder="Enter your password">
                 <br/>
-                <label><input type="checkbox">Remember me</label>
-                <form action="Recaptcha" method="post" data-callback="onSubmit">  
+                <label><input type="checkbox">Remember me</label> 
                     <div class="g-recaptcha"  data-callback="capcha_filled" data-expired-callback="capcha_expired" 
                     data-sitekey="6LeqA6QUAAAAAGwvUyY8jryWr7JSFmXQY2-a24MW"></div>  
-                    <p><button class="btn btn-primary" type="submit" onclick="reCapatchaVerify();">Register</button>
-                </form>
-                <button class="btn btn-primary" onclick="signin();">Sign in</button>
+                    <!-- <p><button class="btn btn-primary" type="submit" onclick="reCapatchaVerify();">Register</button> -->
+                <button type="submit" class="btn btn-primary" onclick="reCaptchaVerify();">Sign in</button>
                 &nbsp;&nbsp;
 			    <button class="btn btn-primary" onclick="jumpToRegister();">Sign up</button>
             </div>

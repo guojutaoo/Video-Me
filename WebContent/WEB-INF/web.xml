@@ -269,4 +269,55 @@
     <servlet-name>Recaptcha</servlet-name>
     <url-pattern>/Recaptcha</url-pattern>
   </servlet-mapping>
+  <filter>
+    <display-name>LoginFilter</display-name>
+    <filter-name>LoginFilter</filter-name>
+    <filter-class>filter.LoginFilter</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>LoginFilter</filter-name>
+    <url-pattern>/movielist.html/*</url-pattern>
+  </filter-mapping>
+  <filter-mapping>
+    <filter-name>LoginFilter</filter-name>
+    <url-pattern>/singlemovie.html</url-pattern>
+  </filter-mapping>
+  <filter-mapping>
+    <filter-name>LoginFilter</filter-name>
+    <url-pattern>/cart.html</url-pattern>
+  </filter-mapping>
+  <filter-mapping>
+    <filter-name>LoginFilter</filter-name>
+    <url-pattern>/artist.html</url-pattern>
+  </filter-mapping>
+  <servlet>
+    <description></description>
+    <display-name>FuzzySearch</display-name>
+    <servlet-name>FuzzySearch</servlet-name>
+    <servlet-class>functions.FuzzySearch</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>FuzzySearch</servlet-name>
+    <url-pattern>/FuzzySearch</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>Pagination</display-name>
+    <servlet-name>Pagination</servlet-name>
+    <servlet-class>functions.Pagination</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Pagination</servlet-name>
+    <url-pattern>/Pagination</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>LoginFunction</display-name>
+    <servlet-name>LoginFunction</servlet-name>
+    <servlet-class>functions.LoginFunction</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>LoginFunction</servlet-name>
+    <url-pattern>/LoginFunction</url-pattern>
+  </servlet-mapping>
 </web-app>

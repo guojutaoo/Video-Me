@@ -28,7 +28,6 @@ public class Movie extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
 	public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		System.out.println("you are in Movie.java");
 		
 		response.setContentType("application/json");
 		
@@ -38,7 +37,6 @@ public class Movie extends HttpServlet {
 		String orderby = (String) session.getAttribute("s_orderby");
 		String genre = (String) session.getAttribute("s_genre");
 		String asc =  (String) session.getAttribute("s_asc");
-		System.out.println("asc="+asc+"orderby="+orderby);
 		if(asc==null) {
 			asc = "0";
 		}
@@ -96,7 +94,6 @@ public class Movie extends HttpServlet {
 	    	    sql = "select id, title, year, director from movies ORDER BY year DESC LIMIT 20 OFFSET "  + offset;
 	    	}
 		    ResultSet result_year = state.executeQuery(sql);
-		    System.out.println("year:" + sql);
 		    
 		    while(result_year.next()) {
 		    	Json_data.append("movie_id", result_year.getObject(1));

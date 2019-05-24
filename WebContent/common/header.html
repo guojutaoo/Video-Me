@@ -63,9 +63,12 @@
 <!-- 			Search bar -->
 			<form class="navbar-form navbar-left">
 				<div class="form-group">
-					<input  type="text" class="form-control" id="movie_name"
-						placeholder="Enter Movie Title">
-				</div>
+					<input  type="text" list="searchresult" class="form-control" id="movie_name" onkeyup="fuzzySearch();"
+                        placeholder="Enter Movie Title">
+                    <datalist id="searchresult">
+                        <!-- be filled by searchmethod.js -->
+                    </datalist>
+                </div>
 				<button type="button" onclick="searchMovie()" class="btn btn-default">Search</button>
 			</form>
 			

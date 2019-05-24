@@ -18,7 +18,6 @@ public class RenewSession extends HttpServlet {
 
 	public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
-		System.out.println("you are in RenewSession.java!");
 		PrintWriter outPrintWriter = response.getWriter();
         HttpSession session = request.getSession();
         
@@ -30,7 +29,6 @@ public class RenewSession extends HttpServlet {
         if(request.getParameter("page")!="") {
         	c_page = Integer.parseInt(request.getParameter("page"));
         }else {
-        	System.out.println(session.getAttribute("current_page"));
         	c_page = Integer.parseInt(session.getAttribute("current_page").toString());
         }
      	
@@ -52,8 +50,6 @@ public class RenewSession extends HttpServlet {
         if(asc!="") {
         	session.setAttribute("s_asc", asc);
         }
-        
-        System.out.println("rvs_page = "+rvs_page);
         
         JSONObject data = new JSONObject();
         data.append("status", "success");

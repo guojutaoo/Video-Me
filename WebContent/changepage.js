@@ -1,7 +1,5 @@
 function sessionChange(data){
     if(data["status"]=="success"){
-                console.log("**************************");
-
         window.location.reload();
     }
     else{
@@ -10,9 +8,7 @@ function sessionChange(data){
 }
 
 function findGenre(genre){
-    alert("genre function");
-    alert("genre = "+genre);
-        jQuery.ajax({
+        $.ajax({
         dataType: "json",
         method: "GET",
         async: true,
@@ -21,9 +17,10 @@ function findGenre(genre){
     });
 }
 
+
 function next(){
     // alert("you are in next()!");
-    jQuery.ajax({
+    $.ajax({
         dataType: "json",
         method: "GET",
         async: true,
@@ -32,9 +29,10 @@ function next(){
     });
 }
 
+
 function prev(){
     // alert("you are in prev()!");
-    jQuery.ajax({
+    $.ajax({
         dataType: "json",
         method: "GET",
         async: true,
@@ -42,6 +40,7 @@ function prev(){
         success: data => sessionChange(data)
     });
 }
+
 
 function nav_change(num){
     // alert("you are in nav_change()!");
@@ -51,10 +50,11 @@ function nav_change(num){
         async: true,
         url: "RenewSession?page="+num+"&orderby=&genre=&asc=&rvs_page=", //change page number directly
         error: function(){alert("!");},
-        // complete: $("#abc").append("<li>" + yourNewWord + "</li>"),//'<a onclick="nav_change(1)">10</a>',
         success: data => sessionChange(data)
     });
 }
+
+
 function change_page(){
     var jump = document.getElementById("num_page").value;
     // alert(jump);
@@ -68,6 +68,7 @@ function change_page(){
     });
 }
 
+
 function asc(){
 	$.ajax({
 		dataType: "json",
@@ -79,6 +80,7 @@ function asc(){
 	    });
     }
     
+
 function desc(){
 	$.ajax({
 		dataType: "json",
@@ -88,6 +90,7 @@ function desc(){
         success: data => sessionChange(data)
 	    });
 	}
+
 
 function orderby(){
     var orderby = document.getElementsByName("keyword")[0].value;
@@ -101,6 +104,7 @@ function orderby(){
 	    });
 	}
 
+    
 function genre(){
 	let genre = jQuery("#genre");
 	$.ajax({

@@ -8,7 +8,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-import com.login.LoginDao;
+import functions.*;
 
 
 public class CheckInfo extends HttpServlet {
@@ -47,7 +47,7 @@ public class CheckInfo extends HttpServlet {
 			response.sendRedirect("register.html");
 			return;
 		}
-		LoginDao handledb = new LoginDao();
+		LoginFunction handledb = new LoginFunction();
 		if(handledb.checkReg(Username)) {
 			response.sendRedirect("register.html");
 		}

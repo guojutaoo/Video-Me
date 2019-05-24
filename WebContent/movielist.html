@@ -32,7 +32,7 @@ w3IncludeHTML();
 <center><h1>Movie</h1></center>
 <div class="container-fluid" onload="refresh();">
     <div class="row">
-        <div class="col-md-3">
+        <div class="col-md-7">
             	<select name="keyword" id="keyword" class="selectpicker">
                     <option value="all">all</option>
 	  	            <option value="rating">rating</option>
@@ -40,11 +40,11 @@ w3IncludeHTML();
                 </select>
                 <button class="btn btn-primary" onclick="orderby()">Submit</button>
         </div>
-        <div class="col-md-3">
+        <div class="col-md-2">
             <button class="btn btn-success" onclick="asc()" >Asc</button>
             <button class="btn btn-danger" onclick="desc()">Desc</button>
         </div>
-        <div class="col-md-4">
+        <div class="col-md-3">
             <form class="form-inline" action="">
                 <input type="text" class="" id="num_page" placeholder="page number" onkeyup="change_page()">
             </form>
@@ -65,15 +65,8 @@ w3IncludeHTML();
 </table>
 
 
-<div  id="center">
-    <ul class="pagination">
-	<li id="item1"><a onclick="prev()">&laquo;</a></li>
-	<li id="abc"><a onclick="nav_change(4)">1</a></li>
-	<li><a nav_change()>2</a></li>
-	<li><a nav_change()>3</a></li>
-	<li><a nav_change()>4</a></li>
-	<li><a nav_change()>5</a></li>
-    <li><a onclick="next()">&raquo;</a></li>
+<div id="center">
+    <ul class="pagination" id="pagebar">
     </ul>
 </div>
 &nbsp; &nbsp; &nbsp;
@@ -88,5 +81,7 @@ w3IncludeHTML();
 <script type="text/javascript" src="movielist.js"></script>
 <script type="text/javascript" src="changepage.js"></script>
 <script type="text/javascript" src="searchmovie.js"></script>
+<script type="text/javascript" src="searchmethod.js"></script>
+<script type="text/javascript" src="pagebar.js"></script>
 </body>
 </html>
