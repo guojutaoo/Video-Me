@@ -7,4 +7,4 @@ interaction between the front-end and back-end.
 Used Google reCaptcha for webpage authentication, and prevented unauthorized
 access to certain webpages using a Servlet filter.
 
-Included feature like fuzzy search, autocomplete, shopping cart, etc.
+Included features like fuzzy search, autocomplete, shopping cart, etc.
