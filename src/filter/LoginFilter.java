@@ -30,7 +30,7 @@ public class LoginFilter implements Filter {
 
 	public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) throws IOException, ServletException {
 		
-		HttpServletResponse res = (HttpServletResponse) response;
+	HttpServletResponse res = (HttpServletResponse) response;
         HttpServletRequest req = (HttpServletRequest) request;
         
         String checklogin = (String) req.getSession().getAttribute("login");
