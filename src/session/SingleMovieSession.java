@@ -15,12 +15,11 @@ public class SingleMovieSession extends HttpServlet {
 
 	public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
     
-		System.out.println("You are in SingleMovieSession.java");
-		String method = request.getParameter("search");
+	    String method = request.getParameter("search");
 	    String id = request.getParameter("id");
 	    String artist = request.getParameter("artist");
 	    String genre = request.getParameter("genre");
-        String moviename = request.getParameter("wd");
+            String moviename = request.getParameter("wd");
 	    
 	    HttpSession session = request.getSession();
 	    
