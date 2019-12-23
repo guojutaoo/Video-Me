@@ -40,7 +40,8 @@ public class Movie extends HttpServlet {
 		if(asc==null) {
 			asc = "0";
 		}
-		if(current_page==null) {               //initialize the variables 
+		if(current_page==null) {               
+			//initialize the variables 
 			current_page = "1";
 			session.setAttribute("current_page", current_page);
 		}
@@ -57,14 +58,14 @@ public class Movie extends HttpServlet {
 		
 		try {
 			Class.forName("com.mysql.jdbc.Driver").newInstance();
-		    Connection connection = DriverManager.getConnection("jdbc:mysql:///moviedb?autoReconnect=true&useSSL=false",
+		        Connection connection = DriverManager.getConnection("jdbc:mysql:///moviedb?autoReconnect=true&useSSL=false",
 					"root","guojutao");
-		    Statement state = (Statement) connection.createStatement();
-		    
-		    String sql;
+		        Statement state = (Statement) connection.createStatement();
+
+		        String sql;
 		  
 		if(genre.equals("all")) {                  //check genre name in session
-	    if(orderby.equals("rating")) {             //check orderby name in session
+	        if(orderby.equals("rating")) {             //check orderby name in session
 	    	if(asc.equals("1")) {                  //check display order in session
 	    		sql = "select movieId, rating from ratings ORDER BY rating ASC LIMIT 20 OFFSET " + offset;
 	    	}else{
@@ -86,13 +87,13 @@ public class Movie extends HttpServlet {
 			    	}
 	    		statement_add.close();
 	    		}
-	    	state.close();
-	    }else if(orderby.equals("year")) {
-	    	if(asc.equals("1")) {
+	        state.close();
+	        }else if(orderby.equals("year")) {
+	    	    if(asc.equals("1")) {
 	    		sql = "select id, title, year, director from movies ORDER BY year ASC LIMIT 20 OFFSET " + offset;
-	    	}else{
-	    	    sql = "select id, title, year, director from movies ORDER BY year DESC LIMIT 20 OFFSET "  + offset;
-	    	}
+	    	    }else{
+	    	        sql = "select id, title, year, director from movies ORDER BY year DESC LIMIT 20 OFFSET "  + offset;
+	    	    }
 		    ResultSet result_year = state.executeQuery(sql);
 		    
 		    while(result_year.next()) {
@@ -109,10 +110,9 @@ public class Movie extends HttpServlet {
 			    state_rating.close();
 		    }
 		    state.close();
-	    }else {
+	       }else {
 	    	    sql = "select id, title, year, director from movies LIMIT 20 OFFSET " + offset;
 	    	    ResultSet result_common = state.executeQuery(sql);
-		    	System.out.println("general:" + sql);
 	    	    while(result_common.next()) {
 	    	    	Json_data.append("movie_id", result_common.getObject(1));
 			    	Json_data.append("name", result_common.getObject(2));
@@ -147,14 +147,13 @@ public class Movie extends HttpServlet {
 				    	Json_data.append("rating",result_add_rating.getObject(1));
 				    }
 				    state_rating.close();
-	    		}
+			}
 			}
 		}
 	        
 		    PrintWriter out = response.getWriter();
 		    out.write(Json_data.toString());
 		} catch (Exception e) {
-
 			e.printStackTrace();
 		}
 
